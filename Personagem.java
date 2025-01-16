@@ -61,8 +61,19 @@ public class Personagem {
       item
     );
   }
- 
-  boolean vivo(){
-   return energia>0;
+  void morreu(){
+    System.out.println(nome + " morreu");
   }
+
+  void atacar(Personagem alvo){
+    System.out.println(nome + " atacando " + alvo.nome);
+    alvo.energia--;
+    if(alvo.energia == 0){
+        System.out.println(alvo.nome+ " foi morto");
+    }
+  }
+  
+  boolean vivo(){
+    return energia>0;
+   }
 }
