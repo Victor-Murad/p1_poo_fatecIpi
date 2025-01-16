@@ -31,11 +31,11 @@ public class Personagem {
     sono = Math.min(sono + 1 ,10);
   }
   void comer(){
-    if (fome >= 1){
+    if (fome >= 1 && item>0){
       System.out.println(nome + " comendo...");
-
       energia = energia + 1 > 10 ? 10 : energia + 1;
       fome--;
+      item--;
     }
     else{
       System.out.println(nome + " sem fome...");
